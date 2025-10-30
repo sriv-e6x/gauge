@@ -315,6 +315,7 @@ func TestLazyScenarioIterator(t *testing.T) {
 		count++
 		if scenario == nil {
 			t.Error("Iterator returned nil scenario")
+			continue
 		}
 		if scenario.ScenarioDataTableRowIndex != count-1 {
 			t.Errorf("Expected ScenarioDataTableRowIndex=%d, got %d", count-1, scenario.ScenarioDataTableRowIndex)
